@@ -1,6 +1,9 @@
-name: Azure Static Web Apps CI/CD
+name: Deploy to Staging Automatically
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
@@ -15,6 +18,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           submodules: true
+          lfs: false
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
