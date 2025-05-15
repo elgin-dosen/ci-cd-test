@@ -2,11 +2,11 @@ name: Deploy PRs to Production
 
 on:
   workflow_dispatch:
-  inputs:
-    pr_numbers:
-      description: "Comma-separated PR numbers to deploy"
-      required: true
-      default: ""
+    inputs:
+      pr_numbers:
+        description: "Comma-separated PR numbers to deploy"
+        required: true
+        default: ""
 
 jobs:
   deploy_production:
